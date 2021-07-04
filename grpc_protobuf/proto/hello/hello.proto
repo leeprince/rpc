@@ -1,0 +1,25 @@
+// 指定 proto 版本
+syntax = "proto3";
+
+// proto 包名，防止定义的消息类型命名冲突
+package hello;
+
+// 指定 go 中的包名， 默认等于 proto 包名
+// go_package 指定的包名必须包含目录分隔符（linxu:/或者windows:\）
+option go_package = "/hello";
+
+// The greeting service definition.
+service Greeter {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
