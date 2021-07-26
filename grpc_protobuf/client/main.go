@@ -15,7 +15,6 @@ import (
 
 const (
 	address = "127.0.0.1:12345"
-	defaultName = "world"
 )
 
 func main() {
@@ -28,11 +27,12 @@ func main() {
 	c := pb.NewGreeterClient(conn)
 	
 	// Contact the server and print out its response.
-	name := defaultName
+	name := "world"
 	
 	if len(os.Args) > 1 {
 		name = os.Args[1]
 	}
+	// 设置超时时间 cancel == time.Second
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
 	defer cancel()
 	r, err := c.SayHello(ctx, &pb.HelloRequest{Name: name})
