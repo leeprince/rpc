@@ -7,7 +7,7 @@ import (
 	"log"
 	"net"
 	// pb "rpc/grpc_protobuf/proto/hello" // protoc 生成 protobuf go 文件到GOROOT
-	// pb "rpc/grpc_protobuf/client/protobuf/hello" // protoc 生成 protobuf go 文件到当前项目
+	// pb "rpc/grpc_protobuf/server/protobuf/hello" // protoc 生成 protobuf go 文件到当前项目
 	pb "github.com/leeprince/protobuf/grpc/hello" // protoc 生成 protobuf go 文件到远程仓库（github）【推荐】
 )
 
