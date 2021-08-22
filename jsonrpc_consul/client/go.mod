@@ -1,4 +1,4 @@
-module rpc/jsonrpc_protobuf/client
+module rpc/jsonrpc_consul/client
 
 go 1.16
 

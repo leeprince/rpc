@@ -21,7 +21,7 @@ const (
 	// 服务名称
 	consulRegisterThisName    string = "go-rpc-service"
 	// 服务地址
-	consulRegisterThisAddress string = "192.168.0.103" // consul 运行在容器中，需要发现该服务，所以需要宿主机地址
+	consulRegisterThisAddress string = "192.168.0.102" // consul 运行在容器中，需要发现该服务，所以需要宿主机地址
 	// 服务端口
 	consulRegisterThisPort    int    = 12345
 )
